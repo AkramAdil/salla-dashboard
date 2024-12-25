@@ -1,40 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Interflow Task
 
-## Getting Started
+## Table of Contents
+- [Introduction](#introduction)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Running the Project](#running-the-project)
+- [Localization](#localization)
 
-First, run the development server:
+## Introduction
+This project is a web application built with Next and TaillwindCSS.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Project Structure
+The project structure is as follows:
+```
+interflow-task/
+├── src/
+│   ├── components/
+│   ├── libs/
+│   │   ├── constants.js
+│   ├── locales/
+│   │   ├── ar.js
+│   │   ├── en.js
+│   ├── App.js
+│   ├── index.js
+├── public/
+├── package.json
+├── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- `src/components/`: Contains React components used in the project.
+- `src/libs/constants.js`: Contains constants used throughout the project, including sidebar items and menu options.
+- `src/locales/`: Contains localization files for different languages.
+- `src/App.js`: Main application component.
+- `src/index.js`: Entry point of the application.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Installation
+To install the project dependencies, run the following command:
+```bash
+npm install
+```
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Running the Project
+To start the development server, run the following command:
+```bash
+npm start
+```
+This will start the application on `http://localhost:3000`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+## Localization
+Localization is handled using the `locales` directory. Each language has its own file (e.g., `ar.js` for Arabic, `en.js` for English).
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Adding a New Locale
+1. Create a new file in the `src/locales/` directory with the language code.
+2. Customize the `next.config.js` add the new language to `locales` array
+3. Add the translations for the new language in the new file.
+4. Import the new locale in the necessary components or files.
 
-## Learn More
+### Using Locales
+To use the localized strings in your components, import the locale file and access the desired string. For example:
+```javascript
+import locales from '../locales/en';
 
-To learn more about Next.js, take a look at the following resources:
+const title = locales.home; // Access the localized string for 'home'
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+## License
+This project is licensed under the MIT License.
