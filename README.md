@@ -8,7 +8,7 @@
 - [Localization](#localization)
 
 ## Introduction
-This project is a web application built with React. It includes features such as sidebar navigation, menu options, and settings, all of which are localized in multiple languages.
+This project is a web application built with Next and TaillwindCSS.
 
 ## Project Structure
 The project structure is as follows:
@@ -51,9 +51,10 @@ This will start the application on `http://localhost:3000`.
 Localization is handled using the `locales` directory. Each language has its own file (e.g., `ar.js` for Arabic, `en.js` for English).
 
 ### Adding a New Locale
-1. Create a new file in the `src/locales/` directory with the language code (e.g., `fr.js` for French).
-2. Add the translations for the new language in the new file.
-3. Import the new locale in the necessary components or files.
+1. Create a new file in the `src/locales/` directory with the language code.
+2. Customize the `next.config.js` add the new language to `locales` array
+3. Add the translations for the new language in the new file.
+4. Import the new locale in the necessary components or files.
 
 ### Using Locales
 To use the localized strings in your components, import the locale file and access the desired string. For example:
