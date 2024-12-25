@@ -1,7 +1,7 @@
 import Avatar from '@/components/avatar'
 import { ChevronDown, Gift, Moon } from 'lucide-react'
 import React, { useState } from 'react'
-import SearchBar from './Searchbar'
+import SearchBar from './SearchBar'
 import DropDownMenu from './DropDownMenu'
 import { useRouter } from 'next/router'
 import ar from '@/locales/ar'
