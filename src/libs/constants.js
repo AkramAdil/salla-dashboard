@@ -25,7 +25,7 @@ export const menuOptions = [
 
 export const mobileMenuOptions = [
     { id: 1, title: 'profile', path: '/profile', icon: (props) => <User2 {...props}/> },
-    { id: 2, title: 'notifications', path: '/settings', icon: (props) => <Bell {...props}/> },
+    { id: 2, title: 'notifications_menu', path: '/settings', icon: (props) => <Bell {...props}/> },
     { id: 3, title: 'platform_updates', path: '/settings', icon: (props) => <BadgePlus {...props}/> },
     { id: 4, title: 'suggestions', path: '/#', icon: (props) => <Pencil {...props}/> },
     { id: 5, title: 'loyalty_points', path: '/#', icon: (props) => <Gift {...props}/> },
